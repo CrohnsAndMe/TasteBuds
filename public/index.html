@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<title> TasteBud APP</title>
+</head>
+<body>
+	
+	<div class="container" ng-controller="AppCtrl">
+		<h1>Tastebud app</h1>	
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Open</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="cafe in cafeList">
+					<td>{{cafe.name}}</td>
+					<td>{{cafe.address}}</td>
+					<td>{{cafe.open}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="controllers/controller.js"></script>
+</body>
+
+
+</html>
